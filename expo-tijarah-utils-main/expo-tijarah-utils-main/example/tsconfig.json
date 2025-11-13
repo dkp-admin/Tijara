@@ -1,0 +1,10 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "tijarah-utils": ["../src/index"],
+      "tijarah-utils/*": ["../src/*"]
+    }
+  }
+}

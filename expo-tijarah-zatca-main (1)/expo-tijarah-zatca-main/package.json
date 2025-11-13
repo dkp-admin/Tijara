@@ -1,0 +1,42 @@
+{
+  "name": "expo-tijarah-zatca",
+  "version": "0.2.3",
+  "description": "Tijarah ZATCA Phase 2",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "build": "expo-module build",
+    "clean": "expo-module clean",
+    "lint": "expo-module lint",
+    "test": "expo-module test",
+    "prepare": "expo-module prepare",
+    "prepublishOnly": "expo-module prepublishOnly",
+    "expo-module": "expo-module",
+    "open:ios": "xed example/ios",
+    "open:android": "open -a \"Android Studio\" example/android"
+  },
+  "keywords": [
+    "react-native",
+    "expo",
+    "expo-tijarah-zatca",
+    "ExpoTijarahZatca"
+  ],
+  "repository": "https://github.com/delusion8399/expo-tijarah-zatca",
+  "bugs": {
+    "url": "https://github.com/delusion8399/expo-tijarah-zatca/issues"
+  },
+  "author": "Shahid Aman <aman@tisostudio.com> ()",
+  "license": "MIT",
+  "homepage": "https://github.com/delusion8399/expo-tijarah-zatca#readme",
+  "devDependencies": {
+    "@types/react": "~19.0.0",
+    "expo": "~53.0.0",
+    "expo-module-scripts": "^4.1.6",
+    "react-native": "0.79.1"
+  },
+  "peerDependencies": {
+    "expo": "*",
+    "react": "*",
+    "react-native": "*"
+  }
+}

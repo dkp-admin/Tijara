@@ -1,0 +1,1 @@
+{"version":3,"file":"ExpoTijarahZatca.types.js","sourceRoot":"","sources":["../src/ExpoTijarahZatca.types.ts"],"names":[],"mappings":"","sourcesContent":["export type ExpoTijarahZatcaModuleEvents = {};\n"]}

@@ -1,0 +1,9 @@
+{
+  "platforms": ["apple", "android", "web"],
+  "apple": {
+    "modules": ["ExpoTijarahZatcaModule"]
+  },
+  "android": {
+    "modules": ["expo.modules.tijarahzatca.ExpoTijarahZatcaModule"]
+  }
+}
