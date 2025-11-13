@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  image-compression:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: image-compression-app
+    environment:
+      - NODE_ENV=qa
+      - PORT=3000
+      - MAX_IMAGE_WIDTH=1920
+      - JPEG_QUALITY=80
+      - WEBP_QUALITY=80
+    volumes:
+      - ./temp:/app/temp
+      - /tmp:/tmp
+    restart: unless-stopped
+    healthcheck:
+      test:
+        ['CMD', 'curl', '-f', 'http://localhost:3000/image-compression/health']
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    security_opt:
+      - seccomp:unconfined
+    network_mode: host
+
+volumes:
+  temp:
