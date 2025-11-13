@@ -1,0 +1,1606 @@
+/* … your existing global + desktop styles … */
+
+/* Global Styles */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  background: white; /* default: white */
+  font-family: 'Montserrat', sans-serif;
+  /* width: 100vw; */
+  overflow-x: hidden;
+}
+
+/* Only set dark background for root when dark theme is active */
+body.dark-theme, .app.dark-theme, .app.dark-theme #root, .app.dark-theme html {
+  background: #111215 !important;
+  color: #fff !important;
+}
+
+/* Ensure the app fills the viewport height */
+.app {
+  /* position: relative;
+  min-height: 100vh; */
+  height: 100%;
+}
+
+/* Move settings icon a bit further down */
+.app img[alt="settings"] {
+  top: 38px !important;   
+}
+
+@media (max-width: 600px) {
+  .app img[alt="settings"] {
+    top: 22px !important; 
+  }
+}
+
+/* Navbar */
+.navbar,
+.navbar.navbar-nobox {
+  /* Remove box styling for .navbar-nobox */
+  background: none !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  width: 340px !important; /* Increased width */
+  max-width: 340px !important;
+  position: fixed;
+  top: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+@keyframes navbarSlide {
+  from {
+    transform: translate(-50%, -50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%);
+    opacity: 1;
+  }
+}
+
+/* Navbar state animations */
+.navbar.search-active {
+  animation: navbarSearch 0.5s forwards;
+}
+
+@keyframes navbarSearch {
+  from {
+    background-color: #fff;
+    padding: 22px 15px;
+    transform: translateX(-50%);
+  }
+  to {
+    background-color: #f5f5f5;
+    padding: 15px 15px;
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+.logo {
+  font-size: 1.3rem !important;
+  font-weight: 1000;
+  color: black;
+  margin: 18px 0 0 0; /* moved a bit down */
+  line-height: 1.1;
+  letter-spacing: -1px;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+/* Icons */
+.icon {
+  width: 20px;
+  height: 18px;
+  cursor: pointer;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.navbar.search-active .search-icon {
+  transform: rotate(90deg);
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+/* Blur Overlay */
+.blur-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.4);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  z-index: 15;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Dropdowns */
+.menu-dropdown, .search-dropdown {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 456px;
+  background-color: white;
+  border: 1.8px solid black;
+  z-index: 20;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  animation: dropdownSlideDown 0.5s ease forwards;
+}
+
+@keyframes dropdownSlideDown {
+  0% {
+    transform: translateX(-50%) translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
+
+.menu-header, .search-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.search-hamburger {
+  font-size: 40px;
+  cursor: pointer;
+  line-height: 20px;
+}
+
+.search-title, .menu-title {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.search-close, .menu-close {
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black; /* Add this line */
+  -webkit-appearance: none; /* Add this to remove iOS default styling */
+  appearance: none; /* Add this for other browsers */
+}
+
+/* Search Input */
+.search-input-container {
+  /* ← added so .suggestions-list can position absolute to this */
+  position: relative;
+  padding: 20px;
+}
+.search-input {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px; /* Minimum size to prevent zoom */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  outline: none;
+}
+
+/* Add a wrapper for the search bar if not already present */
+.search-bar-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px;    /* space below header */
+    margin-bottom: 32px; /* space above product grid */
+    margin-left: 105px;  /* width of sidebar */
+    margin-right: 40px;  /* right padding for symmetry */
+    z-index: 5;
+}
+
+/* Make sure the search input is not too wide */
+.search-bar-wrapper .search-input {
+    max-width: 600px;
+    width: 100%;
+    border-radius: 32px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    background: #fff;
+}
+
+/* Menu Categories */
+.menu-categories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0;
+}
+.menu-category {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.menu-category:hover {
+  color: #666;
+}
+
+/* Product Details Modal */
+.product-details {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 70%;
+  max-width: 600px;
+  background: #fff;
+  border: 1px solid #ccc;
+  z-index: 25;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  animation: fadeIn 0.5s ease;
+}
+
+.product-image {
+  width: 0%;
+  height: auto;
+}
+
+.product-info {
+  margin-top: 10px;
+}
+
+.product-details-content {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Arrow Buttons in Modal */
+.arrow-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 999;
+  color: #333;
+}
+.arrow-button.left  { left: 15px; }
+.arrow-button.right { right: 15px; }
+
+/* AR Button */
+.ar-button {
+  background: #16c784;
+  color: #fff;
+  border: none;
+  padding: 2px 8px;
+  font-size: 12px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 60px !important;
+  height: 60px !important;
+  min-width: 60px !important;
+  min-height: 60px !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px; /* Add rounded corners like Info button */
+}
+
+.product-card .ar-button {
+  margin-top: 24px !important; 
+}
+
+/* Close Button for Product */
+.close-product {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 28px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* AR Modal */
+.ar-modal {
+  position: fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(0,0,0,0.9);
+  z-index:30;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.ar-modal.desktop {
+  background: #fff;
+  color: #333;
+}
+
+.ar-modal.desktop .model-viewer-container {
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.desktop-ar-content {
+  text-align: center;
+  padding: 40px;
+  max-width: 600px;
+}
+
+.desktop-ar-content h2 {
+  margin-bottom: 20px;
+}
+
+.desktop-ar-content .message {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Update close button color for desktop */
+.ar-modal.desktop .close-ar {
+  color: #333;
+}
+
+.close-ar {
+  position:absolute;
+  top:20px; right:20px;
+  font-size:30px;
+  color:#fff;
+  background:none;
+  border:none;
+  cursor:pointer;
+  z-index:35;
+}
+
+/* Transition Keyframes */
+@keyframes slideOutLeft  { from{transform:translateX(0);opacity:1;} to{transform:translateX(-3.8%);opacity:0;} }
+@keyframes slideInRight  { from{transform:translateX(3.8%);opacity:0;} to{transform:translateX(0);opacity:1;} }
+@keyframes slideOutRight { from{transform:translateX(0);opacity:1;} to{transform:translateX(3.8%);opacity:0;} }
+@keyframes slideInLeft   { from{transform:translateX(-3.8%);opacity:0;} to{transform:translateX(0);opacity:1;} }
+
+.product-details-content.slide-out-left  { animation: slideOutLeft 0.5s forwards; }
+.product-details-content.slide-in-right  { animation: slideInRight 0.5s forwards; }
+.product-details-content.slide-out-right { animation: slideOutRight 0.5s forwards; }
+.product-details-content.slide-in-left  { animation: slideInLeft 0.5s forwards; }
+
+/* Categories Sidebar */
+.categories-sidebar {
+  position: relative; /* was fixed */
+  left: 0;
+  top: 0;
+  bottom: auto;
+  width: 90px; 
+  background: white;
+  padding: 10px 15px;
+  overflow-x: hidden; /* prevent horizontal scroll */
+  overflow-y: auto;   /* keep vertical scroll */
+  border-right: 1px solid rgba(223, 223, 223, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 5;
+  height: calc(100vh - 110px); /* header height */
+  margin-top: -35px; /* Move sidebar a bit higher */
+  padding-bottom: 40px; 
+}
+
+/* Add extra padding under the last category box */
+.categories-sidebar .category-box:last-child {
+  margin-bottom: 120px !important; 
+}
+
+/* Make category-box perfectly square and center content */
+.category-box {
+  width: 90px !important;
+  height: 90px !important;
+  min-width: 80px !important;
+  min-height: 80px !important;
+  max-width: 80px !important;
+  max-height: 80px !important;
+  flex: 0 0 auto !important;
+  box-sizing: border-box;
+  border-radius: 18px;
+  margin: 0 0 15px 0;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+  text-align: center;
+  transition: all 0.3s ease;
+  padding: 0 !important;
+  font-size: 11px;
+  position: relative;
+  /* Remove default color so we can set per-category below */
+  color: inherit;
+  background: #f7f7f7 !important; /* Match product card bg */
+}
+
+.category-box .text-wrapper {
+  position: absolute;
+  top: 8px;
+  left: 8px; 
+  right: auto;
+  bottom: auto;
+  width: auto;
+  display: flex;
+  gap: 4px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.category-box .item-count {
+  opacity: 0.7;
+  font-size: 10px;
+}
+
+.category-box:nth-child(12n + 1),
+.category-box:nth-child(12n + 2),
+.category-box:nth-child(12n + 3),
+.category-box:nth-child(12n + 4),
+.category-box:nth-child(12n + 5),
+.category-box:nth-child(12n + 6),
+.category-box:nth-child(12n + 7),
+.category-box:nth-child(12n + 8),
+.category-box:nth-child(12n + 9),
+.category-box:nth-child(12n + 10),
+.category-box:nth-child(12n + 11),
+.category-box:nth-child(12n + 12) {
+  background: #f7f7f7 !important;
+  color: #222 !important;
+}
+
+.category-box img {
+  width: 70% !important;
+  height: 70% !important;
+  min-width: 0;
+  min-height: 0;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  position: absolute;
+  right: -10%;
+  bottom: -10%;
+  background: #fff;
+  border: none;
+  box-shadow: none;
+  pointer-events: none;
+}
+
+.category-box.active {
+  transform: scale(1.05);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+  border-bottom: 4px solid #ff9800 !important;
+}
+
+/* Products Grid */
+.products-grid {
+  position: relative; /* Add a mask to fade out the top of the grid so cards appear to go under the search bar */
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); /* wider cards for desktop */
+  gap: 32px 12px; 
+  background: #fff; /* white background for desktop */
+  padding: 32px 40px 40px 40px; /* more padding for desktop */
+  overflow-y: auto;
+  height: calc(100vh - 110px); /* header height */
+  align-content: flex-start;
+  margin-top: 0 !important;
+  padding-top: 0;
+  max-width: 1700px; 
+  width: 100%;
+  padding-bottom: 40px; 
+}
+
+@media (min-width: 901px) {
+  .products-grid::before {
+    content: "";
+    position: fixed;
+    top: 110px; /* header height */
+    left: 0;
+    width: 100vw;
+    height: 80px; /* height of the fade, adjust as needed */
+    pointer-events: none;
+    z-index: 10;
+    background: linear-gradient(
+      to bottom,
+      #fff 80%,
+      rgba(255,255,255,0.01) 100%
+    );
+    /* For dark theme, override below */
+  }
+  .app.dark-theme .products-grid::before {
+    background: linear-gradient(
+      to bottom,
+      #18191C 80%,
+      rgba(24,25,28,0.01) 100%
+    );
+  }
+}
+
+/* --- Layout 2: Fade mask at top of products grid on desktop only --- */
+@media (min-width: 901px) {
+  .app.layout2 .products-grid::before {
+    content: "";
+    position: fixed;
+    top: 180px; /* match the top of the grid under the search bar in layout 2 */
+    left: 0;
+    width: 100vw;
+    height: 80px; /* height of the fade, adjust as needed */
+    pointer-events: none;
+    z-index: 10;
+    background: linear-gradient(
+      to bottom,
+      #fff 80%,
+      rgba(255,255,255,0.01) 100%
+    );
+  }
+  .app.dark-theme.layout2 .products-grid::before {
+    background: linear-gradient(
+      to bottom,
+      #18191C 80%,
+      rgba(24,25,28,0.01) 100%
+    );
+  }
+}
+
+/* Increase padding under the last product card */
+.products-grid > div:last-child {
+  margin-bottom: 120px !important; 
+}
+
+/* Add extra padding under the last product card */
+.products-grid > div:last-child {
+  margin-bottom: 32px; /* Extra space after the last product */
+}
+
+/* On desktop, add margin to products grid to push it down */
+@media (min-width: 901px) {
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px 9px; /* decrease horizontal gap from 24px to 12px */
+    background: #fff;
+    padding: 32px 40px 40px 40px;
+    max-width: 2000px; 
+    width: 100%;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    align-items: flex-start;
+    align-content: flex-start;
+  }
+}
+
+.product-card {
+  background: #f7f7f7; /* Very light grey */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  animation: fadeIn 0.3s ease;
+  height: 220px; /* Fixed height */
+  overflow: hidden;
+}
+
+.product-card h3 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+  max-height: 32px; /* Limit to 2 lines */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  color: #000 !important;
+  margin-top: 10px !important; /* Add space from the top */
+}
+
+.product-card p {
+  margin: 0;
+  font-size: 11px;
+  color: #666;
+  line-height: 1.3;
+  max-height: 42px; /* Limit to 3 lines */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  color: #000 !important;
+}
+
+.product-card .ar-preview {
+  flex: 1;
+  min-height: 80px;
+  position: relative;
+  margin: 4px 0;
+}
+
+.product-card .ar-button {
+  margin-top: 24px !important; /* move AR button further down */
+  padding: 8px;
+  font-size: 12px;
+  width: 60px !important;
+  height: 60px !important;
+  min-width: 60px !important;
+  min-height: 60px !important;
+}
+
+.product-card img,
+.product-card .product-image {
+  width: 92px !important;
+  height: 85px !important;
+  border: none !important; /* Ensure border is removed */
+  margin: 0 auto 4px auto;
+  display: block;
+  border-radius: 50%;
+}
+
+.product-card .ar-button img {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 4px !important;
+}
+
+/* Categories Grid */
+.categories-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.category-box {
+  padding: 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  background: #F8F8F8;
+}
+
+.category-box h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.category-box .item-count {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.category-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.category-box.active {
+  transform: scale(1.05);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+  border-bottom: 4px solid #ff9800 !important;
+}
+
+/* Category background colors */
+.category-box.pizza { background-color: #FFE5E5; }
+.category-box.burgers { background-color: #FFE9D2; }
+.category-box.sandwiches { background-color: #E5FFFF; }
+.category-box.drinks { background-color: #E5FFE5; }
+.category-box.desserts { background-color: #FFE5F2; }
+
+.products-container {
+  flex: 1;
+  padding-left: 30px;
+  border-left: 1px solid #eee;
+}
+
+/* Categories Layout */
+.main-layout {
+  margin-top: 0 !important;
+  padding-top: 110px; /* header height */
+  display: flex;
+  gap: 0; /* no horizontal gap here, handled by sidebar width and wrapper margin */
+}
+
+/* Add a header bar for the top background */
+.header-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110px; /* match your header region height */
+  background: #fff; /* or dark background when theme==='dark' */
+  z-index: 5; 
+}
+
+/* Mobile Media Queries */
+@media (max-width: 600px) {
+  .navbar,
+  .navbar.navbar-nobox {
+    top: 30px;
+    width: 70vw !important;      /* reduced width for mobile */
+    max-width: 70vw !important;
+    padding: 15px 10px;
+  }
+  .logo {
+    font-size: 1rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 60vw;
+    display: block;
+  }
+  
+  /* Add more specific breakpoints for company name sizing */
+  @media (max-width: 480px) {
+    .logo {
+      font-size: 0.9rem;
+      max-width: 55vw;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .logo {
+      font-size: 0.85rem;
+      max-width: 50vw;
+    }
+  }
+  
+  @media (max-width: 350px) {
+    .logo {
+      font-size: 0.8rem;
+      max-width: 45vw;
+    }
+  }
+  
+  .menu-dropdown, .search-dropdown {
+    top: 15%;
+    width: 95%;
+    max-width: 95%;
+  }
+  .menu-header, .search-header { padding: 10px; }
+  .menu-title, .search-title { font-size: 1.2rem; }
+  .search-input-container { padding: 18px; }
+  .search-input { 
+    font-size: 16px; /* Ensure minimum size on mobile */
+    padding: 6px 8px; /* Slightly reduced padding for mobile */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  /* ——— NEW SUGGESTIONS LIST STYLING ——— */
+  .suggestions-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    list-style: none;
+    margin: 4px 0 0;
+    padding: 0;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    background: white;
+    z-index: 30;
+  }
+  .suggestions-list li {
+    padding: 8px;
+    cursor: pointer;
+  }
+  .suggestions-list li:hover {
+    background: #f0f0f0;
+  }
+
+  .menu-category {
+    font-size: 1rem;
+    margin: 8px 0;
+  }
+  .product-details {
+    width: 95%;
+    max-width: 80%;
+    padding: 15px;
+  }
+  .product-info { font-size: 0.9rem; }
+  .ar-button { font-size: 0.9rem; margin-top: -5%; }
+  .arrow-button { font-size: 2rem; }
+  .close-ar { font-size: 2rem; }
+
+  /* Mobile Categories */
+  .main-layout {
+      padding-top: 140px; 
+      margin-top: 0 !important;
+      display: flex;
+      flex-direction: row;
+  }
+
+  .categories-sidebar {
+    position: relative;
+    top: auto; /* reset for mobile */
+    left: auto;
+    bottom: auto;
+    width: 70px !important;    /* move divider much more left, closer to middle */
+    padding: 6px;
+    padding-left: 6px !important; /* was 18px, start boxes closer to the left */
+    border-right: 1px solid rgba(223, 223, 223, 0.8); /* #DFDFDF 80% for mobile */
+    flex: 0 0 70px !important;  /* match new width */
+    background: white;
+    z-index: 1;
+    overflow-x: hidden !important; /* prevent horizontal scroll on mobile */
+    overflow-y: auto !important;
+    height: calc(100vh - 100px);
+    max-height: calc(100vh - 100px);
+    padding-bottom: 40px; /* Increased padding at bottom */
+  }
+
+  .categories-sidebar .category-box:last-child {
+    margin-bottom: 120px !important; /* Match desktop */
+  }
+
+  .category-box {
+    width: 68px !important;
+    height: 68px !important;
+    min-width: 68px !important;
+    min-height: 68px !important;
+    max-width: 68px !important;
+    max-height: 68px !important;
+    font-size: 5px;   
+    border-radius: 14px;   
+    margin-bottom: 12px;     
+    padding: 0 !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+  }
+  .category-box .text-wrapper {
+    top: 8px;               
+    left: 6px; /* Reduced from 10px to move text more to the left on mobile */
+    font-size: 0.72rem !important;  /* slightly smaller on mobile */
+    gap: 3px;                  
+    text-align: left;
+  }
+
+  .category-box img {
+    width: 72% !important;
+    height: 72% !important;
+    background: transparent !important;
+    border: none;
+    box-shadow: none;
+    pointer-events: none;
+  }
+
+  .products-grid {
+    height: calc(100vh - 100px);
+    position: relative;
+    left: unset;
+    top: unset;
+    right: unset;
+    bottom: unset;
+    width: 100%;
+    min-width: 0;
+    flex: 1;
+    padding: 8px 8px 32px 10px; /* Add extra bottom padding for mobile and move cards right */
+    padding-left: 10px !important; /* add padding to move cards right */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;                   /* Reduced from 12px to bring cards closer together */
+    background: transparent;
+    overflow: visible;
+    align-items: start;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    align-content: start; /* Pack rows at the top, keep row gap consistent */
+    padding-bottom: 40px; /* Increased padding at bottom */
+  }
+
+  .products-grid > div:last-child {
+    margin-bottom: 120px !important; /* Match desktop */
+  }
+
+  .product-card {
+    background: #222326;
+    border: 1px solid #333;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    padding: 6px;                /* Slightly reduced */
+    border-radius: 10px;         
+    height: 120px;             
+    min-height: 145px;           /* Slightly reduced */
+    max-height: 120px;
+    gap: 4px;                
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 2px;
+    overflow: hidden;
+  }
+
+  /* Move price/calories section and AR button higher */
+  .product-card > div:nth-child(2) {
+    margin-top: -5px; /* Reduce top margin of text container */
+  }
+  
+  .product-card > div:nth-child(2) > div:first-child {
+    margin-top: -3px; /* Adjust price/calories position */
+  }
+  
+  .product-card .info-button,
+  .product-card .ar-button {
+    font-size: 10px;             
+    padding: 2px 4px;
+    height: 18px;
+    min-width: 24px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: auto;
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    min-height: 40px !important;
+    margin-top: 8px !important; /* Increased from 4px to move AR button down slightly */
+  }
+
+  .product-card img,
+  .product-card .product-image {
+    width: 92px !important;    
+    height: 85px !important;     
+    border: none; /* Remove border */
+    margin: 0 auto 4px auto;
+    display: block;
+    border-radius: 50%;
+  }
+  .product-card h3 {
+    font-size: 10px;            
+    line-height: 1.1;
+    margin-bottom: 2px;
+    color: #000 !important;
+    text-align: left;
+    width: 100%;
+    word-break: break-word;
+    margin-top: 7px !important; /* Slightly less space for mobile */
+  }
+  .product-card p {
+    font-size: 9px;             
+    line-height: 1.2;
+    margin-bottom: 2px;
+    color: #000 !important;
+    text-align: left;
+    width: 100%;
+    word-break: break-word;
+  }
+  .product-card .info-button,
+  .product-card .ar-button {
+    font-size: 10px;             
+    padding: 2px 4px;
+    height: 18px;
+    min-width: 24px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: auto;
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    min-height: 40px !important;
+    margin-top: 8px !important; /* Increased from 4px to move AR button down slightly */
+  }
+  .product-card > div:last-child {
+    margin-top: auto;
+    display: flex;
+    gap: 4px;
+    justify-content: flex-end;
+    width: 100%;
+    flex-shrink: 0;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+    background: transparent;
+    position: relative;
+    z-index: 2;
+  }
+
+  .product-card .ar-button img {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .description-modal {
+    max-width: 80% !important; 
+    width: 260px !important;   /* Set a fixed width for mobile */
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    padding: 16px !important;
+    border-radius: 13px !important;
+    font-size: 13px !important;
+  }
+
+  @media (max-width: 820px) {
+    .ar-preview {
+      height: 50vh;
+    }
+  }
+  .header-bar {
+      height: 100px;
+      padding: 0 12px;
+      margin-bottom: 24px; /* Add space below header for search bar */
+  }
+
+  .search-bar-wrapper {
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 16px;
+      margin-bottom: 24px; /* More space above product grid */
+      padding: 0 8px;
+  }
+}
+
+/* --- Remove forced padding/margin on mobile so grid is always visible --- */
+@media (max-width: 900px) {
+  .main-layout {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+  .products-grid {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  /* Only for Layout-2 on mobile, carve out 40px gutters */
+  .app.layout2 .products-grid {
+    margin: 0 !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    padding: 8px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Move search bar and grid up in layout 2 */
+  .app.layout2 .search-bar-container-fix {
+    top: 140px !important;
+  }
+  .app.layout2 .main-layout {
+    padding-top: 180px !important;
+  }
+}
+
+/* --- For desktop, increase padding to push grid further down --- */
+@media (min-width: 901px) {
+  .main-layout {
+    padding-top: 240px !important; 
+  }
+  .products-grid {
+    margin-top: 0 !important;
+    /* Remove extra margin if present */
+  }
+}
+
+/* Desktop search bar only visible on desktop */
+.desktop-search-bar {
+  display: flex !important;
+}
+@media (max-width: 900px) {
+  .desktop-search-bar {
+    display: none !important;
+  }
+}
+
+/* Adjust main-layout to account for header + search bar height */
+@media (min-width: 901px) {
+  .main-layout {
+    padding-top: 240px !important; 
+  }
+  .products-grid {
+    margin-top: 0 !important;
+    /* Remove extra margin if present */
+  }
+}
+
+@media (max-width: 900px) {
+  .main-layout {
+    padding-top: 140px !important; 
+  }
+  .products-grid {
+    margin-top: 0 !important;
+    /* Remove extra margin if present */
+  }
+}
+
+/* Desktop-specific improvements for scroll experience */
+@media (min-width: 901px) {
+  /* Enhanced bottom spacing for categories sidebar on desktop */
+  .categories-sidebar {
+    padding-bottom: 60px !important; 
+  }
+  
+  /* Even more padding under the last category box on desktop */
+  .categories-sidebar .category-box:last-child {
+    margin-bottom: 160px !important; /* Significantly increased from 120px */
+  }
+  
+  /* Enhanced bottom spacing for products grid on desktop */
+  .products-grid {
+    padding-bottom: 60px !important; 
+  }
+  
+  /* Even more padding under the last product card on desktop */
+  .products-grid > div:last-child {
+    margin-bottom: 160px !important; 
+  }
+  
+  /* Add scroll padding to improve scrolling behavior */
+  html, body {
+    scroll-padding-bottom: 100px;
+  }
+  
+  /* Add scroll margin to ensure elements are visible when reached by scroll */
+  .categories-sidebar .category-box,
+  .products-grid > div {
+    scroll-margin-bottom: 40px;
+  }
+}
+
+/* Dark Theme Overrides */
+body.dark-theme,
+.app.dark-theme {
+  background: #000000 !important;
+  color: #fff !important;
+}
+
+.app.dark-theme .navbar,
+.app.dark-theme .navbar.navbar-nobox {
+  background: none !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.app.dark-theme .logo {
+  color: #fff !important;
+}
+
+.app.dark-theme .categories-sidebar {
+  background: #18191C !important;
+  border-right: 1px solid #444444 !important; /* Darker, more visible grey */
+}
+
+.app[dir="rtl"].app.dark-theme .categories-sidebar {
+  border-left: 1px solid #444444 !important;
+  border-right: none !important;
+}
+
+@media (max-width: 600px) {
+  .app.dark-theme .categories-sidebar {
+    border-right: 1px solid #444444 !important; /* Match the desktop version */
+  }
+}
+
+.app.dark-theme .category-box {
+  background: #23242A !important;
+  color: #fff !important;
+  border: none !important;
+}
+
+.app.dark-theme .category-box.active {
+  background: #23242A !important;
+  color: #16c784 !important;
+  border-bottom: 4px solid #ff9800 !important;
+}
+
+.app.dark-theme .category-box .text-wrapper {
+  color: #fff !important;
+}
+
+.app.dark-theme .products-grid {
+  background: #18191C !important;
+}
+
+.app.dark-theme .product-card {
+  background: #18191c !important;
+  border: none !important;
+  color: #fff !important;
+  box-shadow: none !important;
+}
+
+.app.dark-theme .product-card h3,
+.app.dark-theme .product-card p {
+  color: #fff !important;
+}
+
+.app.dark-theme .ar-modal.desktop {
+  background: #18191C !important;
+  color: #fff !important;
+}
+
+.app.dark-theme .ar-modal.desktop .model-viewer-container {
+  background: #23242A !important;
+}
+
+.app.dark-theme .desktop-ar-content h2 {
+  color: #fff !important;
+}
+
+.app.dark-theme .close-ar,
+.app.dark-theme .close-product {
+  color: #fff !important;
+}
+
+.app.dark-theme .description-modal {
+  background: #23242A !important;
+  color: #fff !important;
+  border-radius: 14px !important;
+}
+
+.app.dark-theme .description-modal h2,
+.app.dark-theme .description-modal h3,
+.app.dark-theme .description-modal p {
+  color: #fff !important;
+}
+
+.app.dark-theme .description-modal hr {
+  border-top: 1.2px solid #23242A !important;
+}
+
+.app.dark-theme .ar-button {
+  background: #23242A !important;
+  color: #16c784 !important;
+  border: none !important;
+}
+
+
+.app.dark-theme .ar-button:disabled {
+  color: #aaa !important;
+  border-color: #444 !important;
+}
+
+.app.dark-theme .main-layout {
+  background: #18191C !important;
+}
+
+.app.dark-theme .header-bar,
+body.dark-theme .header-bar {
+  background: #18191C !important; /* Match dark theme background */
+}
+
+/* Dark theme: search bar and search results dropdown */
+.app.dark-theme .search-bar-wrapper .search-input,
+body.dark-theme .search-bar-wrapper .search-input {
+    background: #23242A !important;
+    color: #fff !important;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18) !important;
+    border: none !important;
+}
+
+.app.dark-theme .search-bar-wrapper .search-input::placeholder,
+body.dark-theme .search-bar-wrapper .search-input::placeholder {
+    color: #bbb !important;
+    opacity: 1;
+}
+
+/* If your search bar is not using .search-bar-wrapper, target the input directly as fallback */
+.app.dark-theme input[type="text"],
+body.dark-theme input[type="text"] {
+    background: #23242A !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+.app.dark-theme input[type="text"]::placeholder,
+body.dark-theme input[type="text"]::placeholder {
+    color: #bbb !important;
+    opacity: 1;
+}
+
+/* Dark theme for inline search results dropdown */
+.app.dark-theme .suggestions-list,
+body.dark-theme .suggestions-list,
+.app.dark-theme .search-results-dropdown,
+body.dark-theme .search-results-dropdown {
+    background: #23242A !important;
+    color: #fff !important;
+    border: 1px solid #333 !important;
+}
+
+.app.dark-theme .suggestions-list li,
+body.dark-theme .suggestions-list li,
+.app.dark-theme .search-results-dropdown div,
+body.dark-theme .search-results-dropdown div {
+    color: #fff !important;
+}
+
+.app.dark-theme .suggestions-list li:hover,
+body.dark-theme .suggestions-list li:hover,
+.app.dark-theme .search-results-dropdown div:hover,
+body.dark-theme .search-results-dropdown div:hover {
+    background: #18191C !important;
+}
+
+@media (max-width: 600px) {
+  .app.dark-theme .categories-sidebar {
+    background: #18191C !important;
+    border-right: 1px solid #444444 !important; /* Match the desktop version */
+  }
+  .app.dark-theme .category-box {
+    background: #23242A !important;
+    color: #fff !important;
+    border: none !important;
+  }
+  .app.dark-theme .products-grid {
+    background: #18191C !important;
+  }
+  /* only remove the box and side borders in dark mode, keep bottom-border available */
+.app.dark-theme .product-card {
+  background: #18191c !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  /* no more “border: none !important;” */
+  color: #fff !important;
+  box-shadow: none !important;
+}
+
+  .app.dark-theme .product-card h3,
+  .app.dark-theme .product-card p {
+    color: #fff !important;
+  }
+}
+
+/* RTL support — keep layout same, only text direction */
+.app[dir="rtl"] {
+  direction: rtl;
+}
+
+.app[dir="rtl"] .main-layout {
+  flex-direction: row; /* override row-reverse */
+}
+
+/* ensure sidebar stays on left */
+.app[dir="rtl"] .categories-sidebar {
+  left: 0; 
+  right: auto;
+  border-right: 1px solid rgba(223,223,223,0.8);
+  border-left: none;
+}
+
+/* restore search-bar offset */
+.app[dir="rtl"] .search-bar-wrapper {
+  margin-left: 105px; 
+  margin-right: 40px;
+}
+
+/* move sidebar to right in RTL */
+.app[dir="rtl"] .categories-sidebar {
+  left: auto;
+  right: 0;
+  border-left: 1px solid rgba(223,223,223,0.8);
+  border-right: none;
+}
+
+/* adjust search bar margin in RTL */
+.app[dir="rtl"] .search-bar-wrapper {
+  margin-left: 40px;   /* original right padding */
+  margin-right: 105px; /* sidebar width */
+}
+
+/* if needed, flip text alignment */
+.app[dir="rtl"] .logo,
+.app[dir="rtl"] .category-box .text-wrapper,
+.app[dir="rtl"] .product-card h3,
+.app[dir="rtl"] .product-card p {
+  text-align: right;
+}
+
+/* RTL support for search input */
+.app[dir="rtl"] input[type="text"] {
+  text-align: right;
+  direction: rtl;
+  padding: 0 44px 0 36px !important; /* Right padding for search icon, left padding for cancel button */
+}
+
+/* Move search icon to the right side in RTL mode */
+.app[dir="rtl"] img[alt="Search"] {
+  left: auto !important;
+  right: 16px !important;
+}
+
+/* Cancel button should stay on left side in RTL */
+.app[dir="rtl"] input[type="text"] ~ button {
+  left: 12px !important;
+  right: auto !important;
+}
+
+/* Fix search results alignment in RTL */
+.app[dir="rtl"] .search-results-dropdown div,
+.app[dir="rtl"] .suggestions-list li {
+  text-align: right;
+}
+
+/* Fix cancel button placement in RTL mode */
+.app[dir="rtl"] input[type="text"] + img {
+  left: auto;
+  right: 16px;
+}
+
+/* Move cancel button to the right side in RTL mode */
+.app[dir="rtl"] input[type="text"] ~ button {
+  left: 12px !important;
+  right: auto !important;
+}
+
+/* Fix search results alignment in RTL */
+.app[dir="rtl"] .search-results-dropdown div,
+.app[dir="rtl"] .suggestions-list li {
+  text-align: right;
+}
+
+/* only for Layout 2, bump content down */
+.app.layout2 .main-layout {
+  padding-top: 228px !important;
+}
+
+@media (min-width: 901px) {
+  /* only for Layout 2 on desktop, bump content down more */
+  .app.layout2 .main-layout {
+    padding-top: 300px !important; /* ← adjust this value until it sits perfectly */
+  }
+}
+
+/* Only for Layout 2, move search bar further down */
+.app.layout2 .search-bar-container-fix {
+  top: 220px !important;
+}
+
+@media (max-width: 900px) {
+  .app.layout2 .search-bar-container-fix {
+    top: 170px !important;
+  }
+}
+
+/* only for Layout-2, on all screen sizes, restore a 40px gutter each side */
+.app.layout2 .products-grid {
+  margin: 0 40px !important;
+  box-sizing: border-box;
+}
+
+/* Layout-2 grid: center, constrain width, and preserve gutters/padding */
+.app.layout2 .products-grid {
+  /* center the grid */
+  margin: 0 auto !important;
+  /* carve out 40px gutters on either side */
+  max-width: calc(100% - 80px) !important;
+  /* preserve your existing grid padding */
+  padding: 32px 40px 40px 40px !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+}
+
+/* layout-2 only */
+.app.layout2 .products-grid {
+  /* 1) center it… */
+  margin: 0 auto !important;
+  /* 2) carve out 40px gutters on either side… */
+  max-width: calc(100vw - 80px) !important;
+  /* 3) keep your inside padding */
+  padding: 32px 40px 40px 40px !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+}
+
+@media (max-width: 900px) {
+  /* Only for Layout-2 on mobile, carve out 40px gutters */
+  .app.layout2 .products-grid {
+    margin: 0 !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    padding: 8px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Move search bar and grid up in layout 2 */
+  .app.layout2 .search-bar-container-fix {
+    top: 150px !important;
+  }
+  .app.layout2 .main-layout {
+    padding-top: 185px !important;
+  }
+}
+
+/* --- FORCE DARK BACKGROUND FOR LAYOUT 2 PRODUCTS GRID --- */
+.app.dark-theme.layout2 .products-grid {
+  background: #18191C !important;
+  /* Fill the viewport below the grid with dark color */
+  min-height: 100vh !important;
+}
+
+/* Also ensure the main-layout is dark in layout2 dark mode */
+.app.dark-theme.layout2 .main-layout {
+  background: #18191C !important;
+}
+
+/* --- Layout 2: Improved scroll and bottom spacing for products grid --- */
+.app.layout2 .products-grid {
+  scroll-padding-top: 160px !important; /* ≈ header (110px) + search bar (50px) */
+  padding-bottom: 200px !important;     /* give extra space below last card */
+}
+
+/* Optional: each item has room above it when scrolled into view */
+.app.layout2 .products-grid > div {
+  scroll-margin-top: 160px !important;
+}
+
+/* Clean up the last-child margin override—keep only the big one */
+.app.layout2 .products-grid > div:last-child {
+  margin-bottom: 200px !important;
+}
+/* make root and app fill the screen */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.app {
+  min-height: 100vh;
+}
+/* global dark‐mode background */
+body.dark-theme, .app.dark-theme {
+  background-color: #111215 !important;
+}
+/* this will work in both layout1 and layout2 */
+.product-card.highlighted {
+  /* light mode fallback */
+  border-bottom: 4px solid #ff9800 !important;
+}
+
+/* dark mode override (if you need extra specificity) */
+.app.dark-theme .product-card.highlighted {
+  border-bottom: 4px solid #ff9800 !important;
+}
+.app.dark-theme .category-box img {
+  background: transparent !important;
+}
+.app.layout2 img[alt$=" icon"] {
+  background: transparent !important;
+}
+
