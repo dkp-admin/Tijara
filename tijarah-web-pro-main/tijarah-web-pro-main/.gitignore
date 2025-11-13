@@ -1,0 +1,60 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+out
+.next
+
+# misc
+.DS_Store
+.eslintcache
+/.env
+/.env.local
+/.env.development.local
+/.env.test.local
+/.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.vercel
+
+# Deployment Directories & Archives (Added for Tijarah Web)
+# ---------------------------------------------------------
+tijarah-web-deploy/
+tijarah-web-production*/
+deploy/
+deployment/
+*.zip
+*.tar.gz
+deployment-*.zip
+build-*.zip
+
+# Additional Logs & Debug Files
+# -----------------------------
+debug.log
+error.log
+health-check-*.log
+debug-*.log
+
+# Cache & Temporary Files
+# -----------------------
+.cache/
+.tmp/
+tmp/
+temp/
+
+# Keep Important Documentation & Environment
+# ------------------------------------------
+!docs/
+!docs/**
+!.env.production
+!verify-production-env.js

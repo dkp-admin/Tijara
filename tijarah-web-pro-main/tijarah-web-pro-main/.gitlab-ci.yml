@@ -1,0 +1,52 @@
+stages:
+  - test
+  # - deploy-development
+  # - deploy-production
+
+# deploy-development:
+#   stage: deploy-development
+#   image: node:latest
+
+#   script:
+#     - npm i -g vercel && npm ci --cache .npm --prefer-offline
+#     - npm run build
+#     - DEPLOYMENT_URL=$(vercel -t $VERCEL_TOKEN --confirm --prod)
+#   interruptible: true
+#   only:
+#     variables:
+#       - ($CI_ENABLED == "true" && $CI_COMMIT_BRANCH == "development")
+#   cache:
+#     key:
+#       files:
+#         - package-lock.json
+#     paths:
+#       - .npm/
+
+test:
+  stage: test
+  image: node:latest
+
+  script:
+    - npm ci --cache .npm --prefer-offline
+    - npm run build
+  only:
+    - merge_requests
+  interruptible: true
+# deploy-production:
+#   stage: deploy-production
+#   image: node:latest
+
+#   script:
+#     - npm i -g vercel
+#     - DEPLOYMENT_URL=$(vercel -t $VERCEL_TOKEN --confirm --prod)
+#     - echo $DEPLOYMENT_URL > vercel_deployment_url.txt
+#   only:
+#     variables:
+#       - ($CI_ENABLED == "true" && $CI_COMMIT_BRANCH == "main")
+
+#   interruptible: true
+#   artifacts:
+#     when: on_success
+#     paths:
+#       - vercel_deployment_url.txt
+# test

@@ -1,0 +1,720 @@
+key,english
+Void and Comp,Void and Comp
+ Hint, Hint
+No. of Locations,No. of Locations
+View details,View details
+Software Features,Software Features
+Standard,Standard
+StartUp,StartUp
+Advance,Advance
+Stock & Inventory,Stock & Inventory
+Interfaces,Interfaces
+Reports & Insights,Reports & Insights
+Accounting,Accounting
+Saptco,Saptco
+Order type updated,Order type updated
+No Order Types!,No Order Types!
+Void and Comp Reason,Void and Comp Reason
+Void and Comp Reasons,Void and Comp Reasons
+Create Reason,Create Reason
+Search Reason,Search Reason
+No Void or Comp!,No Void or Comp!
+"The Total Debit consists of payouts, vendor payments, and other expenses.","The Total Debit consists of payouts, vendor payments, and other expenses."
+Total Debit,Total Debit
+Total credit consists of Sales and deposits,Total credit consists of Sales and deposits
+Total Credit,Total Credit
+accounting total profit info message,accounting total profit info message
+Profits / Losses,Profits / Losses
+Project your financial future with Anticipated Balance and stay in control of your money.,Project your financial future with Anticipated Balance and stay in control of your money.
+Expected Payments,Expected Payments
+Monitor your dues with Outstanding Balance to maintain healthy financial habits.,Monitor your dues with Outstanding Balance to maintain healthy financial habits.
+Expected Payables,Expected Payables
+SAR: ,SAR: 
+is disabled for billing,is disabled for billing
+Look like item is in different order types,Look like item is in different order types
+Look like product is in different order types,Look like product is in different order types
+ Variants, Variants
+ Boxes, Boxes
+ Crates, Crates
+SAR ,SAR 
+Info,Info
+Note: ,Note: 
+Please choose the order option(s) to cancel the orders within it before day end.,Please choose the order option(s) to cancel the orders within it before day end.
+Open Orders: All the open orders are listed here,Open Orders: All the open orders are listed here
+Ongoing Orders: All the ongoing orders are listed here,Ongoing Orders: All the ongoing orders are listed here
+All the open & ongoing orders would be cancelled,All the open & ongoing orders would be cancelled
+All the open orders would be cancelled,All the open orders would be cancelled
+All the ongoing orders would be cancelled,All the ongoing orders would be cancelled
+Source,Source
+QR,QR
+Crate,Crate
+"Currently, there are no deleted items","Currently, there are no deleted items"
+Online Order Settings,Online Order Settings
+No activity logs!,No activity logs!
+QR order setting configuration updated,QR order setting configuration updated
+QR Order Settings,QR Order Settings
+Box are disabled for billing,Box are disabled for billing
+Crate are disabled for billing,Crate are disabled for billing
+Box are not for sale,Box are not for sale
+Crate are not for sale,Crate are not for sale
+Device not selected reselect again or refresh,Device not selected reselect again or refresh
+Device is inactive for billing,Device is inactive for billing
+Device is unpaired for billing pair again to continue,Device is unpaired for billing pair again to continue
+NO. of Units,NO. of Units
+Stock Count,Stock Count
+"Search with Name, SKU and Code","Search with Name, SKU and Code"
+No Boxes or Crates!,No Boxes or Crates!
+Goes to,Goes to
+Crate: ,Crate: 
+CrateName,CrateName
+Search with User Name / Phone ,Search with User Name / Phone 
+Boxes and Crates,Boxes and Crates
+Boxes Sample Sheet. ,Boxes Sample Sheet. 
+Stocktakes,Stocktakes
+0.00,0.00
+Stocktakes of the company can be managed here,Stocktakes of the company can be managed here
+Order type,Order type
+Product count,Product count
+Category count,Category count
+Create Menu,Create Menu
+Menu can be managed here,Menu can be managed here
+Search using locations and order type,Search using locations and order type
+No Menu!,No Menu!
+Create Sections & Tables,Create Sections & Tables
+Sections of the company can be managed here,Sections of the company can be managed here
+Veg,Veg
+Egg,Egg
+Non-veg,Non-veg
+Composite Products,Composite Products
+Edit Composite Products,Edit Composite Products
+Create Composite Products,Create Composite Products
+Product Code should be maximum 30 digits,Product Code should be maximum 30 digits
+Add atleast select one associate item,Add atleast select one associate item
+Kitchen has been assigned!,Kitchen has been assigned!
+Item Deleted,Item Deleted
+Edit Composite Product,Edit Composite Product
+Create Composite Product,Create Composite Product
+Kitchen,Kitchen
+Associate Items,Associate Items
+associate_item_info_composite_product,associate_item_info_composite_product
+Prices Managemnet,Prices Managemnet
+No Location found!,No Location found!
+Stock Management,Stock Management
+Stock can update after creating composite Product,Stock can update after creating composite Product
+Manage stock/tracking,Manage stock/tracking
+Alert Count,Alert Count
+Reduce stock from original item,Reduce stock from original item
+composite_product_msg_reduceFromOriginal,composite_product_msg_reduceFromOriginal
+Confirm Delete?,Confirm Delete?
+Are you sure you want to delete this? This action cannot be undone.,Are you sure you want to delete this? This action cannot be undone.
+No Composite Products!,No Composite Products!
+No Daily Sales Avilable!,No Daily Sales Avilable!
+Expiring product info message in inventory dashboard ,Expiring product info message in inventory dashboard 
+Crate/Box Name,Crate/Box Name
+Pack/Size,Pack/Size
+Auto,Auto
+Search with Product Name/ SKU ,Search with Product Name/ SKU 
+Kitchens,Kitchens
+Products/Categories,Products/Categories
+All User,All User
+Search with orderID ,Search with orderID 
+Please relaunch the 'Tijarah360 POS' app on all the POS devices for the changes to take effect. ,Please relaunch the 'Tijarah360 POS' app on all the POS devices for the changes to take effect. 
+Search with Vendor Name ,Search with Vendor Name 
+Close,Close
+Kitchen setting updated,Kitchen setting updated
+No. of Products,No. of Products
+No. of Categories,No. of Categories
+KOT Printer,KOT Printer
+info_kot_printer_msg_kitchen_list,info_kot_printer_msg_kitchen_list
+Search with Kitchen Name,Search with Kitchen Name
+No Kitchens!,No Kitchens!
+disable_kitchen_management_status_alert_msg_for_list,disable_kitchen_management_status_alert_msg_for_list
+Delete & Move item to another kitchen,Delete & Move item to another kitchen
+Delete & remove product assigned,Delete & remove product assigned
+delete_kitchen_management_alert_msg_for_list,delete_kitchen_management_alert_msg_for_list
+You're about to disable Kichen Settings,You're about to disable Kichen Settings
+disable_kitchen_settings_alert_msg_for_kitchen_management,disable_kitchen_settings_alert_msg_for_kitchen_management
+Please relaunch the 'Tijarah360 POS' app on all the POS devices for the changes to take effect. ,Please relaunch the 'Tijarah360 POS' app on all the POS devices for the changes to take effect. 
+Operating Hours,Operating Hours
+Business Closure Settings,Business Closure Settings
+"The day-end report covers transactions within store hours, like 8 AM to 10 PM. If the system doesn't follow these hours, it ignores any POS day-start and day-end actions.","The day-end report covers transactions within store hours, like 8 AM to 10 PM. If the system doesn't follow these hours, it ignores any POS day-start and day-end actions."
+"The report relies on custom day start and day end events, allowing flexible hours. If the day-end isn't performed, the system extends reporting to cover all transactions until the next day, aggregating multiple starts and ends.","The report relies on custom day start and day end events, allowing flexible hours. If the day-end isn't performed, the system extends reporting to cover all transactions until the next day, aggregating multiple starts and ends."
+Extended Reporting,Extended Reporting
+"The reporting period extends to cover all transactions until the actual closing time, even if it surpasses predefined business hours, continuing until the next business day or shift.","The reporting period extends to cover all transactions until the actual closing time, even if it surpasses predefined business hours, continuing until the next business day or shift."
+End at business day,End at business day
+If the pos is not doing the day end it will be automatically done at the specified day-end time.,If the pos is not doing the day end it will be automatically done at the specified day-end time.
+"The report follows the standard calendar day from 12 AM to 11:59 PM, aligning with the conventional daily timeline. The system ignores any day-start and day-end actions performed from the POS.","The report follows the standard calendar day from 12 AM to 11:59 PM, aligning with the conventional daily timeline. The system ignores any day-start and day-end actions performed from the POS."
+"The report covers a rolling 24-hour period from a set start time, like 6 AM to 5:59 AM the next day. The system ignores day-start and day-end actions performed from the POS","The report covers a rolling 24-hour period from a set start time, like 6 AM to 5:59 AM the next day. The system ignores day-start and day-end actions performed from the POS"
+"Currently, there are no order types","Currently, there are no order types"
+Online order view menu,Online order view menu
+Online Order,Online Order
+Online Ordering Link,Online Ordering Link
+QR Ordering,QR Ordering
+While enabling this will allow to accept the qr order in web or POS billing,While enabling this will allow to accept the qr order in web or POS billing
+QR Ordering Link,QR Ordering Link
+Tables & Courses,Tables & Courses
+Tables (Dine-in),Tables (Dine-in)
+Courses,Courses
+"Are you sure you want to delete this Product/Collection?
+              It will remove the Quick Items from the location as well","Are you sure you want to delete this Product/Collection?
+              It will remove the Quick Items from the location as well"
+You can add other details in Englis and Arabic as well!,You can add other details in Englis and Arabic as well!
+Category Layout,Category Layout
+Crates,Crates
+Order type name is required,Order type name is required
+Order type name should not more than 20 characters,Order type name should not more than 20 characters
+Order type created,Order type created
+Edit Order Type,Edit Order Type
+Create Order Type,Create Order Type
+Order Type Name,Order Type Name
+Add Payment Date,Add Payment Date
+Payment Date,Payment Date
+Add Payment date,Add Payment date
+Search with Vendor Name ,Search with Vendor Name 
+Select batch you want to adjust,Select batch you want to adjust
+Please Select Kitchen,Please Select Kitchen
+Kitchem move & merge successfully,Kitchem move & merge successfully
+Move,Move
+Select to edit specific location Price,Select to edit specific location Price
+Kilometers,Kilometers
+selling price should not be less than or equal to 0,selling price should not be less than or equal to 0
+kilometers should not be less than or equal to 0,kilometers should not be less than or equal to 0
+You can not add more than 50 Quick items,You can not add more than 50 Quick items
+Do you want to update the stock count on relevant Box and Variant,Do you want to update the stock count on relevant Box and Variant
+Do you want to update the stock count on relevant Variant,Do you want to update the stock count on relevant Variant
+Selecte batch you want to adjust,Selecte batch you want to adjust
+Available,Available
+Actual,Actual
+Show More,Show More
+No Batch Found please add bach from product,No Batch Found please add bach from product
+category Name,category Name
+Select how you like to add product,Select how you like to add product
+Perishable,Perishable
+No Category!,No Category!
+Apply Selection,Apply Selection
+ Name, Name
+SKU ,SKU 
+Adjustments,Adjustments
+ Add Boxes/Pack, Add Boxes/Pack
+ We couldn't find any matches for, We couldn't find any matches for
+Reason is required,Reason is required
+Reason Deleted,Reason Deleted
+Edit Reason,Edit Reason
+Change the status of the Reason,Change the status of the Reason
+Remove All,Remove All
+ here, here
+No price adjustments!,No price adjustments!
+Manage Stock ,Manage Stock 
+Kilometer,Kilometer
+Relations,Relations
+Boxes Per Crate,Boxes Per Crate
+Products Per Box,Products Per Box
+-,-
+return Qty.,return Qty.
+Customer name is required,Customer name is required
+Tags name is required,Tags name is required
+Website name is required,Website name is required
+Average Shipping is required,Average Shipping is required
+Vendor Shipping is required,Vendor Shipping is required
+Please Select Locations,Please Select Locations
+Order Email is required,Order Email is required
+Customer Email is required,Customer Email is required
+Vendor Details,Vendor Details
+Vandor ID,Vandor ID
+Vandor,Vandor
+Profile Details,Profile Details
+Order Email,Order Email
+Payment Tabs,Payment Tabs
+User Type,User Type
+Discount Values(in %),Discount Values(in %)
+Copied,Copied
+Search using User,Search using User
+"No Record, Add vendor","No Record, Add vendor"
+VAT ,VAT 
+Total ,Total 
+Driver,Driver
+Card Refund ,Card Refund 
+Wallet Refund ,Wallet Refund 
+Credit Refund ,Credit Refund 
+Top Reason for Void,Top Reason for Void
+Top Reason for Comp,Top Reason for Comp
+No. of Times,No. of Times
+No. of Orders Void (Today),No. of Orders Void (Today)
+No. of Orders Comp (Today),No. of Orders Comp (Today)
+Section Name,Section Name
+Floor,Floor
+Table (capacity),Table (capacity)
+Search with section name,Search with section name
+No Sections!,No Sections!
+ | Tijarah, | Tijarah
+Boost up your services with Tijarah360,Boost up your services with Tijarah360
+Contact Us,Contact Us
+Modules,Modules
+Features,Features
+Everything you need to know,Everything you need to know
+Contact us today for any inquiries; we’re here to help!,Contact us today for any inquiries; we’re here to help!
+Offline ,Offline 
+Online ,Online 
+Expected,Expected
+actual,actual
+Discrepancy,Discrepancy
+Has Batching,Has Batching
+Select Batch,Select Batch
+View Note,View Note
+Edt Note,Edt Note
+Add Note,Add Note
+Search with Name,Search with Name
+"Currently, there are no items added","Currently, there are no items added"
+Pending Approval,Pending Approval
+Created At,Created At
+Stocktakes ID,Stocktakes ID
+CreatedBy,CreatedBy
+Approved By,Approved By
+Last Updated,Last Updated
+Search with stocktakes ID,Search with stocktakes ID
+No Stocktake Order!,No Stocktake Order!
+"Are you sure you want to delete this Product?
+              It will remove the variant as well as boxes","Are you sure you want to delete this Product?
+              It will remove the variant as well as boxes"
+Please fill the last row before adding a new one.,Please fill the last row before adding a new one.
+Item details,Item details
+Selling price,Selling price
+Start quantity,Start quantity
+End quantity,End quantity
+Custom rate,Custom rate
+Search with Name / Product name / SKU / Product Code ,Search with Name / Product name / SKU / Product Code 
+No volumetric Price!,No volumetric Price!
+Printer,Printer
+Expense Type,Expense Type
+Void,Void
+Comp,Comp
+Hourly Report,Hourly Report
+Composite Product,Composite Product
+Volumetric Pricing,Volumetric Pricing
+Menu Management,Menu Management
+Section & Table,Section & Table
+Miscellaneous Expenses,Miscellaneous Expenses
+Offline ,Offline 
+Online ,Online 
+Please enter a valid referal,Please enter a valid referal
+Edit Box/Crate,Edit Box/Crate
+Create Box/Crate,Create Box/Crate
+ Name is required in English, Name is required in English
+ Name is required in Arabic, Name is required in Arabic
+Cost Price is required,Cost Price is required
+Selling Price is required,Selling Price is required
+Count is required,Count is required
+Count must be greater than 0,Count must be greater than 0
+Please add product,Please add product
+Please add box,Please add box
+Box Created,Box Created
+Crate Created,Crate Created
+Box Updated,Box Updated
+Crate Updated,Crate Updated
+SKU already exist!,SKU already exist!
+Create Box/Crate ,Create Box/Crate 
+Box and Crate Details,Box and Crate Details
+Product Count.,Product Count.
+Box Count.,Box Count.
+Crate SKU,Crate SKU
+Box Code,Box Code
+Crate Code,Crate Code
+Cost price,Cost price
+"${
+                                        formik.values.type === ""crate""
+                                          ? ""Crate""
+                                          : ""Box""
+                                      } set as saleable","${
+                                        formik.values.type === ""crate""
+                                          ? ""Crate""
+                                          : ""Box""
+                                      } set as saleable"
+"${
+                                        formik.values.type === ""crate""
+                                          ? ""Crate""
+                                          : ""Box""
+                                      } set as non-saleable","${
+                                        formik.values.type === ""crate""
+                                          ? ""Crate""
+                                          : ""Box""
+                                      } set as non-saleable"
+Billing availability,Billing availability
+Stock tracking,Stock tracking
+No stock found!,No stock found!
+"Disabling this ${
+                                                  formik.values.type === ""crate""
+                                                    ? ""crate""
+                                                    : ""box""
+                                                } will prevent you from billing it, even if there is stock. Are you sure you want to disable it?","Disabling this ${
+                                                  formik.values.type === ""crate""
+                                                    ? ""crate""
+                                                    : ""box""
+                                                } will prevent you from billing it, even if there is stock. Are you sure you want to disable it?"
+"Stock tracking ${
+                                                stockDetail.tracking
+                                                  ? ""On""
+                                                  : ""Off""
+                                              }","Stock tracking ${
+                                                stockDetail.tracking
+                                                  ? ""On""
+                                                  : ""Off""
+                                              }"
+"Alert ${
+                                                  stockDetail.lowStockAlert
+                                                    ? ""On""
+                                                    : ""Off""
+                                                }","Alert ${
+                                                  stockDetail.lowStockAlert
+                                                    ? ""On""
+                                                    : ""Off""
+                                                }"
+Alert when stock count is low,Alert when stock count is low
+Change the status of the Box,Change the status of the Box
+Boxes and Crates| Tijarah,Boxes and Crates| Tijarah
+Please enter a valid discount code,Please enter a valid discount code
+Please enter a valid promotion code,Please enter a valid promotion code
+Sorry we are not accepting online order,Sorry we are not accepting online order
+Sorry we are not accepting qr order,Sorry we are not accepting qr order
+Edit Category,Edit Category
+Delivered,Delivered
+Customer Account,Customer Account
+My Account,My Account
+PAST ORDERS,PAST ORDERS
+View More Orders,View More Orders
+Please login to continue,Please login to continue
+Sales trends,Sales trends
+Sale Type,Sale Type
+Hourly sales,Hourly sales
+Chart Type,Chart Type
+Present,Present
+Previous,Previous
+Daily sales,Daily sales
+text,text
+This week,This week
+Previous week,Previous week
+Weekly sales,Weekly sales
+Week,Week
+Monthly sales,Monthly sales
+Edit Deposit,Edit Deposit
+Create Deposit,Create Deposit
+Enter valid expense name,Enter valid expense name
+Expense name is required,Expense name is required
+Expense name must not be greater than 60 characters,Expense name must not be greater than 60 characters
+Payment is required,Payment is required
+Pyament should not be empty,Pyament should not be empty
+Expense type is required,Expense type is required
+date is required,date is required
+Reference Number must not be greater than 30 characters,Reference Number must not be greater than 30 characters
+Description must not be greater than 70 characters,Description must not be greater than 70 characters
+Expense Updated,Expense Updated
+Expense Created,Expense Created
+You can't add more than 3 payment method,You can't add more than 3 payment method
+payment method not added,payment method not added
+amount not added,amount not added
+Same document can't be uploaded multiple times,Same document can't be uploaded multiple times
+Deposit Details,Deposit Details
+Deposit,Deposit
+Payment method,Payment method
+"Currently, there are no payments","Currently, there are no payments"
+Expense created from POS devices can only be updated from POS device,Expense created from POS devices can only be updated from POS device
+Please select location,Please select location
+Kitchen Name is required in English,Kitchen Name is required in English
+Kitchen name must not be greater than 60 characters,Kitchen name must not be greater than 60 characters
+Kitchen Name is required in Arabic,Kitchen Name is required in Arabic
+Description must not be greater than 50 characters,Description must not be greater than 50 characters
+Kitchen Management,Kitchen Management
+Edit Kitchen,Edit Kitchen
+Create Kitchen,Create Kitchen
+Product's added to Kitchen Group,Product's added to Kitchen Group
+Category's added to Kitchen Group,Category's added to Kitchen Group
+Kitchen updated,Kitchen updated
+Product with the given reference not found,Product with the given reference not found
+Edit Kitchen Management,Edit Kitchen Management
+Create Kitchen Management,Create Kitchen Management
+Kitchen (English),Kitchen (English)
+Kitchen (Arabic),Kitchen (Arabic)
+After creation you can come back later for adding product and category for this kicthen,After creation you can come back later for adding product and category for this kicthen
+Kitchen Products,Kitchen Products
+You can configure KOT printer for this kitchen from POS printer settings,You can configure KOT printer for this kitchen from POS printer settings
+info_kitchen_management_msg,info_kitchen_management_msg
+Display Token,Display Token
+In Process,In Process
+Please Collect,Please Collect
+Scan to View this in your phone,Scan to View this in your phone
+Powered by,Powered by
+ Tijarah360, Tijarah360
+Return Order,Return Order
+Po Reference No.,Po Reference No.
+ Make Payment, Make Payment
+  Paid,  Paid
+View sample File,View sample File
+reason is required,reason is required
+Staff is required,Staff is required
+Due Date is required,Due Date is required
+Stocktake updated,Stocktake updated
+Create New Stocktakes,Create New Stocktakes
+Stocktake Scope,Stocktake Scope
+Due Date,Due Date
+Info stocktake due date,Info stocktake due date
+Add Items,Add Items
+Stocktake_message,Stocktake_message
+Manage,Manage
+Choose a location before  adding,Choose a location before  adding
+Internal Notes,Internal Notes
+Cancel Stoktake,Cancel Stoktake
+Approve & complete,Approve & complete
+Request Approve,Request Approve
+Are you sure want to approve and completed. Do you want to proceed?,Are you sure want to approve and completed. Do you want to proceed?
+are you sure want to request?,are you sure want to request?
+Edit Menu,Edit Menu
+Order type not exits for menu creation,Order type not exits for menu creation
+Edit Menu ,Edit Menu 
+Create Menu ,Create Menu 
+Select a location to create menu!,Select a location to create menu!
+Update Menu,Update Menu
+Please select a location to add categories,Please select a location to add categories
+Please select a location to add products,Please select a location to add products
+Restaurant Menu,Restaurant Menu
+Search item with name,Search item with name
+Edit Transaction,Edit Transaction
+Add Transaction,Add Transaction
+Enter valid Transaction name,Enter valid Transaction name
+Transaction name is required,Transaction name is required
+Transaction name must not be greater than 60 characters,Transaction name must not be greater than 60 characters
+Transaction Updated,Transaction Updated
+Transaction Added,Transaction Added
+You can not change the status once it is set,You can not change the status once it is set
+You can not change the status once it set,You can not change the status once it set
+To be paid,To be paid
+Received,Received
+To be received,To be received
+Transaction Name,Transaction Name
+Staus has been mark paid,Staus has been mark paid
+Staus has been mark due,Staus has been mark due
+You can change this status of this transaction when you update this,You can change this status of this transaction when you update this
+Mark Received,Mark Received
+Transactions created from POS devices / PO / Day End Sales can not be updated!,Transactions created from POS devices / PO / Day End Sales can not be updated!
+Payment Method ,Payment Method 
+Data is being generated on the basis of transaction created at date,Data is being generated on the basis of transaction created at date
+Search with expenses/deposits,Search with expenses/deposits
+Module not Found,Module not Found
+Back to Home,Back to Home
+Update package,Update package
+ You don't have permission for this page, You don't have permission for this page
+Online Ordering Restaurant,Online Ordering Restaurant
+Choose your delivery type,Choose your delivery type
+Online Ordering Retail,Online Ordering Retail
+Delivered on,Delivered on
+Cancelled on,Cancelled on
+Cancel Order,Cancel Order
+Token,Token
+Sections,Sections
+Edit Global Brand,Edit Global Brand
+Create Global Brand,Create Global Brand
+Brand Details,Brand Details
+Change the status of the brand,Change the status of the brand
+Search with brand name,Search with brand name
+ the sample File, the sample File
+VAT % ,VAT % 
+Total Sales ,Total Sales 
+No. of locations,No. of locations
+Starts at: ,Starts at: 
+Annum per location,Annum per location
+"Note: For any customizations in hardware, talk to our sales representative","Note: For any customizations in hardware, talk to our sales representative"
+Please select at least one required hardware,Please select at least one required hardware
+AD NAME,AD NAME
+TYPE,TYPE
+SCHEDULE,SCHEDULE
+DURATION,DURATION
+STATUS,STATUS
+PROGRESS,PROGRESS
+Waiter,Waiter
+Package Name is required,Package Name is required
+Please Select Module,Please Select Module
+Monthly Price is required,Monthly Price is required
+Subscription Period is required,Subscription Period is required
+Renewal Price is required,Renewal Price is required
+Trial Period is required,Trial Period is required
+Create Package,Create Package
+All Package,All Package
+Create package,Create package
+Package Information,Package Information
+Products is required,Products is required
+Packages,Packages
+Company is required,Company is required
+User Type is required,User Type is required
+Code should be maximum 5 digits,Code should be maximum 5 digits
+Referral Code is required,Referral Code is required
+Referral Discount is required,Referral Discount is required
+Percentage should be two digit only,Percentage should be two digit only
+Referral Details Updated,Referral Details Updated
+New Referral Created,New Referral Created
+Create Referral & Coupon,Create Referral & Coupon
+Referral & Coupon,Referral & Coupon
+Edit Referral & Coupon,Edit Referral & Coupon
+Create New Referral & Coupon,Create New Referral & Coupon
+Referral Discount,Referral Discount
+Item Added,Item Added
+Item updated,Item updated
+Item deleted,Item deleted
+Discounted order can't be modified,Discounted order can't be modified
+Discounted order can't be deleted,Discounted order can't be deleted
+Order must contain at least one item,Order must contain at least one item
+Online Order Details,Online Order Details
+Search item with name and SKU,Search item with name and SKU
+"Currently, there are no items","Currently, there are no items"
+Removed Items,Removed Items
+Activity Logs,Activity Logs
+Delete?,Delete?
+Do you want to delete this item?,Do you want to delete this item?
+Edit specific location Price,Edit specific location Price
+Discount percent should be grater than 0,Discount percent should be grater than 0
+Maximum value can not be less than minimum value.,Maximum value can not be less than minimum value.
+Unique,Unique
+"Please specify the maximum number of codes needed, as this cannot be updated once the promotion is created","Please specify the maximum number of codes needed, as this cannot be updated once the promotion is created"
+Number of codes to generate,Number of codes to generate
+You can download the code file from here after the promotion,You can download the code file from here after the promotion
+QR Ordering Restaurant,QR Ordering Restaurant
+QR Ordering Retail,QR Ordering Retail
+Comp Reasons,Comp Reasons
+Item Comp,Item Comp
+Amount Comp,Amount Comp
+Order No.,Order No.
+Comp Report,Comp Report
+The report being shown is based on your current time zone (12:00 AM - 11:59 PM),The report being shown is based on your current time zone (12:00 AM - 11:59 PM)
+No Comp Report!,No Comp Report!
+The report being shown is based on your current time zone (12:00 AM - 11:59 PM).,The report being shown is based on your current time zone (12:00 AM - 11:59 PM).
+Promotion,Promotion
+Report Type,Report Type
+Search with ,Search with 
+Orders Report,Orders Report
+Order Report,Order Report
+The order's date and time stamp is based on your current time zone.,The order's date and time stamp is based on your current time zone.
+VAT % ,VAT % 
+Total Sales ,Total Sales 
+Void Reasons,Void Reasons
+Void Item,Void Item
+Amount Voided.,Amount Voided.
+Void Report,Void Report
+No Void Report!,No Void Report!
+Enter valid section name,Enter valid section name
+Section Name is required in English,Section Name is required in English
+Section name must not be greater than 60 characters,Section name must not be greater than 60 characters
+Section Name is required in Arabic,Section Name is required in Arabic
+Section Location is required,Section Location is required
+Floor Type is required,Floor Type is required
+Table must be greater than 0,Table must be greater than 0
+Table value is required,Table value is required
+Section & table Details Updated,Section & table Details Updated
+New Section & table Created,New Section & table Created
+section already exists.,section already exists.
+Fill the table,Fill the table
+Please enter a label for the last row before adding a new one.,Please enter a label for the last row before adding a new one.
+Edit Section,Edit Section
+Create Section,Create Section
+Section,Section
+Section Details,Section Details
+Section Name (English),Section Name (English)
+Section Name (Arabic),Section Name (Arabic)
+Table Details,Table Details
+Automatic table name,Automatic table name
+Custom table name,Custom table name
+Table Prefix,Table Prefix
+Number of Table,Number of Table
+Table Name,Table Name
+Table Capacity,Table Capacity
+Table Status,Table Status
+Add Table,Add Table
+Change the status of the Section,Change the status of the Section
+Sections & Tables,Sections & Tables
+Name is required in English,Name is required in English
+Volume Price,Volume Price
+Edit Volume Pricing,Edit Volume Pricing
+Create Volume Pricing,Create Volume Pricing
+Volume Pricing Created,Volume Pricing Created
+Volume Pricing Updated,Volume Pricing Updated
+Volume Pricing Details,Volume Pricing Details
+Add products,Add products
+Manage Products,Manage Products
+Choose a location before  selecting products,Choose a location before  selecting products
+Change the status of the  volume price,Change the status of the  volume price
+Add Products!.,Add Products!.
+Volume Pricing,Volume Pricing
+Volume Pricing | Tijarah,Volume Pricing | Tijarah
+QR - Self Pickup,QR - Self Pickup
+Void: ,Void: 
+DRIVER,DRIVER
+Dine in Details,Dine in Details
+Order received at,Order received at
+Starts at: ,Starts at: 
+Annum,Annum
+Newly Added,Newly Added
+Updated,Updated
+Vendor 1,Vendor 1
+Vendor 2,Vendor 2
+PO GRN,PO GRN
+Quick GRN,Quick GRN
+Unpaid,Unpaid
+Partially Paid,Partially Paid
+Ended,Ended
+Closed,Closed
+Positive,Positive
+Negative,Negative
+Stock Received,Stock Received
+Inventory Re-count,Inventory Re-count
+Damaged,Damaged
+Theft,Theft
+Loss,Loss
+Restock Return,Restock Return
+Batch Shift,Batch Shift
+PO Return,PO Return
+Available Stocks,Available Stocks
+Zero Stocks,Zero Stocks
+Negative Stocks,Negative Stocks
+Expired,Expired
+Expiring Soon,Expiring Soon
+Revoked,Revoked
+Newest,Newest
+Oldest,Oldest
+Order Count,Order Count
+Per Item,Per Item
+Per Gram,Per Gram
+Per Kilogram,Per Kilogram
+Per Litre,Per Litre
+Per Ounce,Per Ounce
+Lulu Hypermarket,Lulu Hypermarket
+Al Sadhan Supermarket,Al Sadhan Supermarket
+Complete With print,Complete With print
+Complete without print,Complete without print
+NeoLeap,NeoLeap
+Manual,Manual
+Dairy-free,Dairy-free
+Gluten-free,Gluten-free
+Halal,Halal
+Kosher,Kosher
+Nut-free,Nut-free
+Vegan,Vegan
+Vegetarian,Vegetarian
+Celery,Celery
+Crustaceans,Crustaceans
+Eggs,Eggs
+Fish,Fish
+Lupin,Lupin
+Milk,Milk
+Molluscs,Molluscs
+Mustard,Mustard
+Peanuts,Peanuts
+Sesame,Sesame
+Soy,Soy
+Sulphites,Sulphites
+Tree-nuts,Tree-nuts
+Assigned,Assigned
+Not Assigned,Not Assigned
+Level 0,Level 0
+Level 1,Level 1
+Level 2,Level 2
+Level 3,Level 3
+Level 4,Level 4
+The report being shown is based on location's business hours and time zone.,The report being shown is based on location's business hours and time zone.
+The report being shown is based on End at business day settings.,The report being shown is based on End at business day settings.
+The report being shown is based on Reporting hours,The report being shown is based on Reporting hours

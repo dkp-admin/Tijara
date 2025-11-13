@@ -1,0 +1,16 @@
+name: Merge PR When Openend
+on:
+  pull_request:
+    types:
+      - opened
+    branches:
+      - development
+      - qa
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    steps:
+      - run: gh pr merge $PR --merge
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.number }}
