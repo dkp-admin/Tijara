@@ -1,0 +1,17 @@
+stages:
+  - eas-build
+
+eas-build:
+  image: node:latest
+  stage: eas-build
+  interruptible: true
+  only:
+    - main
+    - development
+    - qa
+  script:
+    - apt-get update
+    - apt-get install -y rsync
+    - npm i --global eas-cli
+    - yarn
+    - eas build --profile $CI_COMMIT_BRANCH --platform android --no-wait --non-interactive

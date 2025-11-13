@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "329318000348",
+    "project_id": "tijarah360",
+    "storage_bucket": "tijarah360.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:329318000348:android:7445d3876250e624a03619",
+        "android_client_info": {
+          "package_name": "com.tijarah360.insights"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQ1Wtbm1xxaZkzoYBkmgVCmmdGvUbDzQY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:329318000348:android:82bd88db856b4ddda03619",
+        "android_client_info": {
+          "package_name": "com.tijarah360.pos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQ1Wtbm1xxaZkzoYBkmgVCmmdGvUbDzQY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

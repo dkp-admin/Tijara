@@ -1,0 +1,65 @@
+export type InputProps = {
+  isPrice?: boolean;
+  label?: string;
+  leftIcon?: any;
+  rightIcon?: any;
+  placeholderText?: any;
+  handleChange?: any;
+  handleBlur?: any;
+  autoFocus?: boolean;
+  values?: string;
+  maxLength?: number;
+  disabled?: boolean;
+  style?: any;
+  allowClear?: any;
+  onFocus?: any;
+  refs?: any;
+  containerStyle?: any;
+  keyboardType?: any;
+  multiline?: boolean;
+  numOfLines?: number;
+  autoCapitalize?: string;
+  helperText?: string;
+};
+
+export type SelectInputProps = {
+  isTwoText?: boolean;
+  label?: string;
+  leftText?: string;
+  infoMsg?: string;
+  leftTextWithInfo?: boolean;
+  searchText?: string;
+  placeholderText?: string;
+  options?: any;
+  handleChange?: any;
+  values?: any;
+  showInputValue?: string;
+  fontSize?: number;
+  disabled?: boolean;
+  allowSearch?: boolean;
+  containerStyle?: any;
+  style?: any;
+  marginHorizontal?: string;
+  isRightArrow?: boolean;
+  isTax?: boolean;
+  clearValues?: boolean;
+  showFooter?: boolean;
+  footerMsg?: string;
+  getSearchQuery?: (val: string) => void;
+};
+
+export type DateInputProps = {
+  label?: string;
+  placeholderText?: string;
+  mode?: any;
+  dateFormat?: string;
+  minimumDate?: Date;
+  maximumDate?: Date;
+  handleChange?: any;
+  values?: any;
+  rightIcon?: boolean;
+  open?: boolean;
+  containerStyle?: any;
+  disabled?: boolean;
+  style?: any;
+};

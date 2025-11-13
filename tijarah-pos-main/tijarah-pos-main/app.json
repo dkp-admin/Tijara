@@ -1,0 +1,86 @@
+{
+  "expo": {
+    "name": "Tijarah360 POS",
+    "slug": "tijarah-POS",
+    "version": "2.0.18",
+    "orientation": "default",
+    "icon": "./assets/images/icon.png",
+    "scheme": [
+      "tijarahpos"
+    ],
+    "userInterfaceStyle": "automatic",
+    "isTabletOnly": true,
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "buildNumber": "2.0.18",
+      "supportsTablet": true,
+      "bundleIdentifier": "com.tijarah360.pos"
+    },
+    "android": {
+      "versionCode": 480020018,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "config": {
+        "usesCleartextTraffic": false
+      },
+      "package": "com.tijarah360.pos",
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.USB_PERMISSION",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
+      ],
+      "googleServicesFile": "./google-services.json"
+    },
+    "web": {
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos."
+        }
+      ],
+      [
+        "./plugins/disallow-adb-backup"
+      ],
+      [
+        "./plugins/withCustomGradle"
+      ],
+      [
+        "./plugins/withQueries"
+      ],
+      [
+        "react-native-keyevent-expo-config-plugin"
+      ],
+      [
+        "expo-updates",
+        {
+          "username": "shahidhelal990"
+        }
+      ]
+    ],
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/4a9a53fc-afde-4206-a608-7de1c651fead"
+    },
+    "owner": "tiso-studio",
+    "extra": {
+      "eas": {
+        "projectId": "4a9a53fc-afde-4206-a608-7de1c651fead"
+      }
+    }
+  }
+}
