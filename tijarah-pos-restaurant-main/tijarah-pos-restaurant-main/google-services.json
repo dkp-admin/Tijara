@@ -1,0 +1,126 @@
+{
+  "project_info": {
+    "project_number": "476837129386",
+    "project_id": "tijarah-pos",
+    "storage_bucket": "tijarah-pos.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:476837129386:android:cd4596eee815451279f4d3",
+        "android_client_info": {
+          "package_name": "com.tijarah360.insights"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "476837129386-k053q7ldt8t775oqba87okqlkn2ocdph.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5Pwv48bzc2ogrvzd_QcB1ydga7WvAgAg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "476837129386-k053q7ldt8t775oqba87okqlkn2ocdph.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:476837129386:android:e9171fb72aed7dae79f4d3",
+        "android_client_info": {
+          "package_name": "com.tijarah360.pos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "476837129386-k053q7ldt8t775oqba87okqlkn2ocdph.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5Pwv48bzc2ogrvzd_QcB1ydga7WvAgAg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "476837129386-k053q7ldt8t775oqba87okqlkn2ocdph.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:476837129386:android:b6093f10c9ed424d79f4d3",
+        "android_client_info": {
+          "package_name": "com.tijarahapp.pos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "476837129386-k053q7ldt8t775oqba87okqlkn2ocdph.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5Pwv48bzc2ogrvzd_QcB1ydga7WvAgAg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "476837129386-k053q7ldt8t775oqba87okqlkn2ocdph.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:476837129386:android:b6093f10c9ed424d79f4d3",
+        "android_client_info": {
+          "package_name": "com.tijarah360.restaurant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "476837129386-k053q7ldt8t775oqba87okqlkn2ocdph.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5Pwv48bzc2ogrvzd_QcB1ydga7WvAgAg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "476837129386-k053q7ldt8t775oqba87okqlkn2ocdph.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,86 @@
+{
+  "expo": {
+    "name": "T-360 Restaurant POS",
+    "slug": "tijarah-POS-restaurant",
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./assets/images/icon.png",
+    "scheme": ["tijarahposrestaurant"],
+    "userInterfaceStyle": "automatic",
+    "assetBundlePatterns": ["**/*"],
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "buildNumber": "2.0.47",
+      "supportsTablet": true,
+      "bundleIdentifier": "com.tijarah360.pos"
+    },
+    "android": {
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "config": {
+        "usesCleartextTraffic": false
+      },
+      "package": "com.tijarah360.restaurant",
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.USB_PERMISSION",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.SCHEDULE_EXACT_ALARM",
+        "android.permission.INTERNET",
+        "android.permission.BLUETOOTH",
+        "android.permission.BLUETOOTH_ADMIN",
+        "android.permission.BLUETOOTH_CONNECT",
+        "android.permission.BLUETOOTH_SCAN"
+      ],
+      "googleServicesFile": "./google-services.json"
+    },
+    "web": {
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "sounds": ["./assets/notification_sound.mp3"]
+        }
+      ],
+      ["./plugins/disallow-adb-backup"],
+      ["./plugins/withCustomGradle"],
+      ["./plugins/withQueries"],
+      [
+        "expo-updates",
+        {
+          "username": "shahidhelal990"
+        }
+      ],
+      ["expo-asset", "expo-font"],
+      ["react-native-keyevent-expo-config-plugin"]
+    ],
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/4a9a53fc-afde-4206-a608-7de1c651fead"
+    },
+    "owner": "tiso-studio",
+    "extra": {
+      "eas": {
+        "projectId": "0f2671c5-35cf-4102-97c3-4fcecad8e7c9"
+      }
+    }
+  }
+}
