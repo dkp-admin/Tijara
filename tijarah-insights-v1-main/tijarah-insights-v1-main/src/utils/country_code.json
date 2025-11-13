@@ -1,0 +1,16 @@
+[
+  {
+    "name": "India",
+    "flag": "🇮🇳",
+    "code": "IN",
+    "dial_code": "+91",
+    "length": 12
+  },
+  {
+    "name": "Saudi Arabia",
+    "flag": "🇸🇦",
+    "code": "SA",
+    "dial_code": "+966",
+    "length": 9
+  }
+]

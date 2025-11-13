@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "T-360 Insights",
+    "slug": "merchant-analytics",
+    "version": "1.0.2",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": ["merchantanalytics"],
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "buildNumber": "8",
+      "supportsTablet": true,
+      "bundleIdentifier": "com.tijarah360.insights",
+      "infoPlist": {
+        "NSCameraUsageDescription": "The app requires camera permission to upload profile picture feature",
+        "NSPhotoLibraryAddUsageDescription": "The app requires photos library permission to upload profile picture feature",
+        "NSPhotoLibraryUsageDescription": "The app requires photos library permission to upload profile picture feature"
+      }
+    },
+    "android": {
+      "versionCode": 3,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.tijarah360.insights",
+      "googleServicesFile": "./google-services.json"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app requires photos library permission to upload profile picture feature"
+        }
+      ],
+      [
+        "expo-updates",
+        {
+          "username": "shahidhelal990"
+        }
+      ]
+    ],
+    "updates": {
+      "url": "https://u.expo.dev/6107991e-125a-4b4f-8763-d8a18b585a73"
+    },
+    "owner": "tiso-studio",
+    "extra": {
+      "eas": {
+        "projectId": "6107991e-125a-4b4f-8763-d8a18b585a73"
+      }
+    }
+  }
+}

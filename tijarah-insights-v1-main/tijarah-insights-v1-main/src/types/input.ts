@@ -1,0 +1,43 @@
+export type InputProps = {
+  label?: string;
+  leftIcon?: any;
+  rightIcon?: any;
+  placeholderText?: string;
+  handleChange?: any;
+  handleBlur?: any;
+  values?: string;
+  fontWeight?: string;
+  fontSize?: number;
+  maxLength?: number;
+  disabled?: boolean;
+  style?: any;
+  allowClear?: any;
+  onFocus?: any;
+  refs?: any;
+  containerStyle?: any;
+  keyboardType?: any;
+  multiline?: boolean;
+  numOfLines?: number;
+  autoCapitalize?: string;
+};
+
+export type SelectInputProps = {
+  isTwoText?: boolean;
+  label?: string;
+  leftText?: string;
+  searchText?: string;
+  placeholderText?: string;
+  options?: any;
+  handleChange?: any;
+  values?: any;
+  showInputValue?: string;
+  fontSize?: number;
+  disabled?: boolean;
+  allowSearch?: boolean;
+  containerStyle?: any;
+  style?: any;
+  marginHorizontal?: string;
+  isRightArrow?: boolean;
+  isTax?: boolean;
+  clearValues?: boolean;
+};
