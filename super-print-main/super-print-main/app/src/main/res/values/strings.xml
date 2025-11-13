@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Super Print</string>
+    <string name="notification_queue_channel_id">expo_print_support_queue_channel</string>
+    <string name="notification_queue_channel_name">Printer Queue</string>
+    <string name="notification_queue_channel_description">Notifications for printer queue operations</string>
+    <string name="notification_queue_title">Printer Queue Running</string>
+    <string name="notification_queue_idle">Ready to process print jobs</string>
+    <string name="notification_queue_processing">Processing %1$d print job(s)</string>
+    <string name="notification_queue_pending">%1$d print job(s) pending</string>
+    <string name="notification_queue_stop">Stop Queue</string>
+
+    <!-- Service descriptions -->
+    <string name="printer_queue_service_description">Manages the printer queue in the background</string>
+</resources>

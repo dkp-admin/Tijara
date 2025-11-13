@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home_fragment"
+        android:icon="@android:drawable/ic_menu_compass"
+        android:title="Home" />
+    <item
+        android:id="@+id/test_prints_fragment"
+        android:icon="@android:drawable/ic_menu_send"
+        android:title="Test Prints" />
+    <item
+        android:id="@+id/printer_management_fragment"
+        android:icon="@android:drawable/ic_menu_manage"
+        android:title="Printers" />
+</menu>
