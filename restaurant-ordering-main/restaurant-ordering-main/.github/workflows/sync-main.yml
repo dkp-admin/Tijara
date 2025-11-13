@@ -1,0 +1,21 @@
+name: GitlabSync
+
+on:
+  push:
+    branches:
+      - main
+  delete:
+    branches:
+      - main
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    name: Git Repo Sync
+    steps:
+      - uses: actions/checkout@v2
+      - uses: adambirds/sync-github-to-gitlab-action@v1.1.0
+        with:
+          destination_repository: git@gitlab.com:tijarah/restaurant-ordering.git
+          destination_branch_name: main
+          destination_ssh_key: ${{ secrets.GITLAB_SSH_KEY }}
