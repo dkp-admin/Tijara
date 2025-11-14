@@ -1,0 +1,38 @@
+[
+  {
+    "key": "SAUDI_ARABIA",
+    "id": "Asia/Riyadh",
+    "display": "Saudi Arabia (UTC+03:00)",
+    "offset": "+03:00",
+    "countries": ["Saudi Arabia", "Kuwait", "Yemen"]
+  },
+  {
+    "key": "UAE",
+    "id": "Asia/Dubai",
+    "display": "UAE/Dubai (UTC+04:00)",
+    "offset": "+04:00",
+    "countries": ["United Arab Emirates", "Oman", "Azerbaijan"]
+  },
+  {
+    "key": "PAKISTAN",
+    "id": "Asia/Karachi",
+    "display": "Pakistan (UTC+05:00)",
+    "offset": "+05:00",
+    "countries": ["Pakistan", "Islamabad", "Karachi"]
+  },
+  {
+    "key": "INDIA",
+    "id": "Asia/Kolkata",
+    "display": "India (UTC+05:30)",
+    "offset": "+05:30",
+    "countries": ["India", "Sri Lanka"]
+  },
+
+  {
+    "key": "US_EASTERN",
+    "id": "America/New_York",
+    "display": "US Eastern (UTC-05:00/EDT-04:00)",
+    "offset": "-05:00",
+    "countries": ["US East Coast", "Parts of Canada"]
+  }
+]

@@ -1,0 +1,5 @@
+[
+  { "name": "Retail", "code": "RE" },
+  { "name": "Food", "code": "FO" },
+  { "name": "Services", "code": "SE" }
+]

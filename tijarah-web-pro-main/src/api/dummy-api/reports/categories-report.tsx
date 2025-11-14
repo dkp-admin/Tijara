@@ -1,0 +1,38 @@
+export const entities = {
+  results: [
+    {
+      _id: 1,
+      categoryName: "Fruits & Vegetables",
+      ordersCount: "32,897",
+      grossRevenue: "349,939.00",
+      refundedItems: "2,390",
+      refundedAmount: "36,898.00",
+      netRevenue: "3,18,000",
+      discounts: "1,298.00",
+      vat: "51,282.00",
+    },
+
+    {
+      _id: 2,
+      categoryName: "Frozen Food",
+      ordersCount: "12,897",
+      grossRevenue: "394,018.00",
+      refundedItems: "1,292",
+      refundedAmount: "28,902.00",
+      discounts: "573.00",
+      netRevenue: "3,93,201",
+      vat: "37,389.00",
+    },
+    {
+      _id: 3,
+      categoryName: "Bread & Bakery",
+      ordersCount: "18,389",
+      grossRevenue: "190,827.00",
+      refundedItems: "935",
+      refundedAmount: "16,290.00",
+      discounts: "2,189.00",
+      netRevenue: "1,88,319",
+      vat: "29,092.00",
+    },
+  ],
+};

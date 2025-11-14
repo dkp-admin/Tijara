@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Environment Debug</title>
+</head>
+<body>
+    <h1>Client-Side Environment Debug</h1>
+    <div id="env-info"></div>
+    
+    <script>
+        // Check what environment variables are available in the browser
+        const envInfo = {
+            userAgent: navigator.userAgent,
+            url: window.location.href,
+            timestamp: new Date().toISOString(),
+            
+            // Try to access Next.js environment variables
+            nextPublicAppEnv: typeof process !== 'undefined' && process.env ? process.env.NEXT_PUBLIC_APP_ENV : 'process.env not available',
+            nextPublicFrontendUrl: typeof process !== 'undefined' && process.env ? process.env.NEXT_PUBLIC_FRONTEND_URL : 'process.env not available',
+            
+            // Check if we can access the global Next.js config
+            nextConfig: typeof window !== 'undefined' && window.__NEXT_DATA__ ? window.__NEXT_DATA__ : 'Next.js data not available'
+        };
+        
+        document.getElementById('env-info').innerHTML = '<pre>' + JSON.stringify(envInfo, null, 2) + '</pre>';
+        
+        // Also log to console
+        console.log('🔍 Client Environment Debug:', envInfo);
+        
+        // Try to fetch the debug API
+        fetch('/api/debug-env')
+            .then(response => response.json())
+            .then(data => {
+                console.log('🌐 Server Environment:', data);
+                document.getElementById('env-info').innerHTML += '<h2>Server Environment:</h2><pre>' + JSON.stringify(data, null, 2) + '</pre>';
+            })
+            .catch(error => {
+                console.error('❌ Error fetching server environment:', error);
+                document.getElementById('env-info').innerHTML += '<h2>Server Environment Error:</h2><pre>' + error.message + '</pre>';
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    // "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "rules": {
+    "@next/next/no-img-element": "off",
+    "@next/next/no-page-custom-font": "off",
+    "jsx-a11y/alt-text": "off",
+    "react/display-name": "off",
+    "react/no-children-prop": "off",
+    "react/jsx-max-props-per-line": "off",
+    "react/no-unescaped-entities": "warn",
+    "no-unused-vars": "off",
+    "no-unused-expressions": "warn",
+    "react-hooks/exhaustive-deps": "off"
+    // "@typescript-eslint/no-unused-vars": "error",
+    // "@typescript-eslint/no-explicit-any": "off",
+    // "@typescript-eslint/ban-ts-comment": "off"
+  }
+}
